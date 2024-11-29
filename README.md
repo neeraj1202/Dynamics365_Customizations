@@ -37,7 +37,7 @@ A plugin to validate email uniqueness for Contact records.
 
 ## Code
 [PreventDuplicateEmailPlugin.cs](PreventDuplicateEmailPlugin.cs)
-
+-----------------------------------------------------------------------
 
 # Calculate Discount Custom API
 A Custom API for calculating a 10% discount on a given amount.
@@ -52,3 +52,42 @@ A Custom API for calculating a 10% discount on a given amount.
 
 ## Code
 [CalculateDiscountPlugin.cs](CalculateDiscountPlugin.cs)
+
+# **Custom API: GetCustomerOrders**
+
+## **Purpose**
+This Custom API retrieves sales orders for a given customer and returns the details in JSON format.
+
+---
+
+## **Features**
+- Retrieves orders for a specified customer.
+- Returns details like Order ID, Name, Status, and Total Amount.
+- Output is formatted as a JSON string for easy parsing.
+
+---
+
+## **How to Use**
+1. **Input Parameter**:  
+   - `customerId` (Uniqueidentifier): The ID of the customer whose orders you want to retrieve.
+
+2. **Output Parameter**:  
+   - `customerOrders` (String): A JSON-formatted string containing order details.
+
+3. **Example Output**:
+   ```json
+   [
+       {
+           "OrderID": "12345",
+           "CustomerName": "Order 1",
+           "OrderStatus": "Active",
+           "TotalValue": 150.00
+       },
+       {
+           "OrderID": "67890",
+           "CustomerName": "Order 2",
+           "OrderStatus": "Submitted",
+           "TotalValue": 200.00
+       }
+   ]
+
